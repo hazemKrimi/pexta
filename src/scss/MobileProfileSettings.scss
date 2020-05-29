@@ -1,0 +1,134 @@
+@import './variables';
+
+#mobile-profile-settings-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: #70707040;
+    justify-items: center;
+    align-items: center;
+
+    #mobile-profile-settings {
+        width: 70%;
+        padding: 2rem 1rem;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        grid-row-gap: 1.5rem;
+
+        & > div {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+
+            .close-profile-settings {
+                cursor: pointer;
+                width: 1rem;
+                height: 1rem;
+                justify-self: flex-end;
+
+                path {
+                    fill: url(#linear-gradient);
+                }
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                background: linear-gradient(#eacc56, #ee64d1);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                justify-self: flex-start;
+            }
+        }
+
+        h3 {
+            cursor: pointer;
+            justify-self: center;
+            font-size: 1rem;
+            color: #7D7D7D;
+        }
+    }
+
+    .change-photo, .change-password, .change-email, .change-username {
+        grid-template-rows: repeat(2, auto);
+        grid-row-gap: 1rem;
+        align-items: center;
+        width: 70%;
+        padding: 2rem 1rem;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        display: none;
+
+        .settings-return {
+            cursor: pointer;
+            display: inline-block;
+            justify-self: flex-start;
+
+            h2 {
+                font-size: 1.3rem;
+                background: linear-gradient(#eacc56, #ee64d1);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                justify-self: flex-start;
+            }
+        }
+
+        .settings {
+            justify-self: center;
+            display: grid;
+            grid-template-rows: auto;
+            grid-row-gap: 1rem;
+            align-items: center;
+            justify-items: center;
+
+            h3 {
+                font-size: 1rem;
+                color: #7d7d7d;
+            }
+
+            svg {
+                width: 5rem;
+                height: 5rem;
+                
+                path {
+                    fill: url(#linear-gradient);
+                }
+            }
+
+            form {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-row-gap: .5rem;
+            }
+
+            input[type="file"] {
+                width: 80%;
+                
+                &::-webkit-file-upload-button {
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    color: #7D7D7D;
+                    background: none;
+                }
+            }
+
+            input[type="text"], input[type="email"], input[type="password"] {
+                padding: .1rem;
+                border: none;
+                border-bottom: 1px solid #ee64d1;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+}

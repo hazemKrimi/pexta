@@ -1,0 +1,133 @@
+@import './variables';
+
+#user-profile-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: #70707040;
+    justify-items: center;
+    align-items: center;
+
+    #user-profile {
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        display: grid;
+        grid-row-gap: .2rem;
+
+        .close-user-profile {
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            padding: .5rem;
+            justify-self: flex-end;
+
+            @media #{$bigScreens} {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            path {
+                fill: url(#linear-gradient);
+            }
+        }
+
+        .user {
+            display: grid;
+            grid-template-rows: auto;
+            grid-row-gap: .2rem;
+            justify-items: center;
+            align-items: center;
+
+            svg {
+                width: 5rem;
+                height: 5rem;
+
+                @media #{$bigScreens} {
+                    width: 8rem;
+                    height: 8rem;
+                }
+
+                path {
+                    fill: url(#linear-gradient);
+                }
+            }
+
+            h3 {
+                font-size: 1.2rem;
+
+                @media #{$bigScreens} {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .user-posts {
+            padding: .5rem 2rem 2rem 2rem;
+            display: grid;
+            grid-row-gap: .5rem;
+
+            h3 {
+                font-size: 1rem;
+
+                @media #{$bigScreens} {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .posts {
+                padding: .1rem;
+                height: 150px;
+                overflow-y: scroll;
+                display: grid;
+                grid-row-gap: .5rem;
+
+                @media #{$bigScreens} {
+                    padding: .3rem;
+                }
+
+                &::-webkit-scrollbar {
+                    width: .2rem;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background: #707070;
+                }
+
+                .post {
+                    background: white;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    border: 1px solid #CFCBCB;
+                    box-shadow: 0px 0px 1px #17171777;
+                    display: grid;
+                    grid-row-gap: .3rem;
+
+                    h4 {
+                        font-size: .8rem;
+
+                        @media #{$bigScreens} {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    p {
+                        @media #{$bigScreens} {
+                            font-size: .8rem;
+                        }
+                    }
+
+                    .stats {
+                        display: grid;
+                        grid-template-columns: repeat(3, auto);
+                        justify-items: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

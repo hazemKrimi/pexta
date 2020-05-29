@@ -1,0 +1,119 @@
+@import './variables';
+
+#desktop-profile-settings-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: #70707040;
+    justify-items: center;
+    align-items: center;
+
+    #desktop-profile-settings {
+        width: auto;
+        padding: .8rem;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-row-gap: .5rem;
+
+        & > div {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+        }
+
+        .close-profile-settings {
+            cursor: pointer;
+            width: 1.5rem;
+            height: 1.5rem;
+            justify-self: flex-end;
+
+            path {
+                fill: url(#linear-gradient);
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            background: linear-gradient(#eacc56, #ee64d1);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-self: flex-start;
+        }
+
+        .settings {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: .5rem;
+
+            @media only screen and (max-width: 1440px) {
+                grid-template-columns: repeat(2, auto);
+            }
+
+            h3 {
+                font-size: 1rem;
+                color: #7D7D7D;
+            }
+
+            input[type="text"], input[type="email"], input[type="password"] {
+                padding: .5rem;
+                border: none;
+                border-bottom: 1px solid #ee64d1;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button:hover {
+                transform: none;
+                background: linear-gradient(60deg, #eacc56, #ee64d1);
+            }
+
+            input[type="file"]::-webkit-file-upload-button {
+                cursor: pointer;
+                outline: none;
+                border: none;
+                color: #7D7D7D;
+                background: none;
+                width: 100%;
+            }
+
+            .change-photo, .change-password, .change-email, .change-username {
+                padding: .5rem;
+                border-radius: 8px;
+                border: 1px solid #CFCBCB;
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                justify-items: flex-start;
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: .5rem;
+            }
+
+            form {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .change-photo {
+                grid-template-rows: repeat(4, auto);
+
+                svg {
+                    width: 5rem;
+                    height: 5rem;
+                    
+                    path {
+                        fill: url(#linear-gradient);
+                    }
+                } 
+            }
+        }
+    }
+}

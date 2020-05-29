@@ -1,0 +1,64 @@
+@import './variables';
+
+#showcase {
+    height: 85vh;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+    h1 {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        align-self: center;
+    }
+
+    .contact {
+        text-align: right;
+        align-self: flex-end;
+
+        svg {
+            cursor: pointer;
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: #d3d3d3;
+            transition: fill .3s ease-in-out;
+    
+            &:nth-child(2) {
+                margin-left: .2rem;
+                margin-right: .2rem;
+            }
+        }
+
+        .facebook:hover {
+            fill: #4267b2;
+        }
+
+        .instagram:hover {
+            fill: #e4405f;
+        }
+
+        .mail:hover {
+            fill: #dd4b39;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    #showcase {
+        h1 {
+            font-size: 3rem;
+            text-align: left;
+            align-self: center;
+        }
+
+        .contact {
+            text-align: left;
+
+            svg {
+                width: 3rem;
+                height: 3rem;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}

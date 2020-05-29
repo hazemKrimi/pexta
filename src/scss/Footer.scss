@@ -1,0 +1,61 @@
+@import './variables';
+
+footer {
+    height: auto;
+    background-color: #4e4e4e;
+    color: white;
+    font-size: 11px;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: .1rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .footer-logo {
+        fill: rgba(255,255,255,.75);
+        width: 5.5rem;
+        height: 5.5rem;
+        justify-self: flex-start;
+    }
+
+    .copyright {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        text-align: right;
+
+        span {
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media #{$bigScreens} {
+    footer {
+        font-size: 1rem;
+        
+        .container {
+            grid-column-gap: 1rem;
+        }
+
+        .footer-links {
+            justify-self: flex-end;
+            grid-template-rows: none;
+            grid-template-columns: repeat(2, auto);
+            grid-column-gap: .5rem;
+        }
+    }
+}

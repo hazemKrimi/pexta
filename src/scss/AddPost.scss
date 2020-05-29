@@ -1,0 +1,97 @@
+@import './variables';
+
+#add-post-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: #70707040;
+    justify-items: center;
+    align-items: center;
+
+    #add-post {
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        display: grid;
+        justify-items: center;
+        grid-row-gap: .5rem;
+
+        .close-add-post {
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            // padding: .5rem;
+            justify-self: flex-end;
+
+            path {
+                fill: url(#linear-gradient);
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            background: linear-gradient(#eacc56, #ee64d1);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        form {
+            width: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-row-gap: .5rem;
+
+            input, textarea {
+                font-family: Montserrat;
+                width: 100%;
+                padding: .5rem;
+                border: none;
+                border-bottom: 1px solid #ee64d1;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media #{$bigScreens} {
+    #add-post-container {
+    
+        #add-post {
+            width: 70%;
+            padding: .5rem;
+            height: auto;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .close-add-post {
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: .5rem;
+            }
+            
+            form {
+                grid-row-gap: 1rem;
+        
+                input, textarea {
+                    font-size: 1rem;
+                }
+        
+                button {
+                    padding: 1rem 1.5rem;
+                    font-size: 1rem;
+                    justify-self: flex-end;
+                }
+            }
+        }
+    }
+}

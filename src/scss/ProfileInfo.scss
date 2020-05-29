@@ -1,0 +1,114 @@
+@import './variables';
+
+#profile-info {
+    display: none;
+
+    @media #{$bigScreens} {
+        display: grid;
+        grid-template-rows: repeat(2, auto) 1fr;
+        grid-row-gap: 1.5rem;
+    }
+
+    .profile-stats, .contact, .ad {
+        padding: 1rem 3rem;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #CFCBCB;
+        box-shadow: 0px 0px 5px #17171777;
+    }
+
+    .profile {
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #CFCBCB;
+        box-shadow: 0px 0px 5px #17171777;
+
+        .settings-btn {
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            margin: .5rem;
+            position: relative;
+            left: 85%;
+            
+            .st0{
+                fill:url(#linear-gradient);
+            }
+        }
+
+        .user {
+            padding: 1rem 3rem;
+            padding-top: 0;
+            text-align: center;
+
+            svg {
+                width: 8rem;
+                height: 8rem;
+
+                path {
+                    fill: url(#linear-gradient);
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: normal;
+            }
+
+            .user-btns {
+                margin-top: 1rem;
+                display: grid;
+                grid-row-gap: .3rem;
+                font-size: 1.1rem;
+
+                button {
+                    cursor: pointer;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .profile-stats {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 1rem;
+
+        h3 {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1rem;
+            justify-items: center;
+            font-size: 1.1rem;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-left: .1rem;
+                
+                .cls-1 {
+                    fill: #6A6A6A;
+                }
+            }
+
+            .likes, .dislikes, .comments {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+
+    .ad {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}

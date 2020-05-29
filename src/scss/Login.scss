@@ -1,0 +1,93 @@
+@import './variables';
+
+#log-in-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: #70707040;
+    justify-items: center;
+    align-items: center;
+
+    #log-in {
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px #707070;
+        background: white;
+        display: grid;
+        justify-items: center;
+        grid-row-gap: .5rem;
+
+        .close-log-in {
+            cursor: pointer;
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: .5rem;
+            justify-self: flex-end;
+
+            path {
+                fill: url(#linear-gradient);
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            background: linear-gradient(#eacc56, #ee64d1);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        form {
+            padding: 2rem;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-row-gap: .2rem;
+
+            input {
+                padding: .5rem;
+                border: none;
+                border-bottom: 1px solid #ee64d1;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                padding: .5rem 1rem;
+                border: none;
+                border-radius: 4px;
+                margin-top: 1rem;
+                color: white;
+                background: linear-gradient(60deg, #eacc56, #ee64d1);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    #log-in {
+        position: absolute;
+        top: 12%;
+        right: 7%;
+    }
+
+    h2 {
+        font-size: 2.5;
+    }
+    
+    form {
+        padding: 2rem 4rem;
+
+        input {
+            padding: 1rem;
+        }
+
+        button {
+            padding: 1rem 1.5rem;
+        }
+    }
+}

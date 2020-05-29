@@ -1,0 +1,91 @@
+@import './variables';
+
+#landing-nav {
+    height: 10vh;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-logo {
+        width: 7rem;
+        height: 7rem;
+        
+        .cls-1 {
+            fill: url(#linear-gradient);
+        }
+    }
+
+    .big-btns {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+
+        .cls-1 {
+            fill: url(#linear-gradient);
+        }
+    }
+
+    .mobile-menu-overlay {
+        background: #70707040;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        opacity: 0;
+        z-index: 1;
+        display: none;
+    }
+
+    .mobile-menu {
+        background: linear-gradient(120deg, #ee64d1, #eacc56);
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        top: 0%;
+        left: 100%;
+        z-index: 2;
+        display: none;
+
+        .small-btns {
+            padding-top: 10rem;
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            justify-content: center;
+            text-align: center;
+            grid-row-gap: 3rem;
+        }
+
+        #sign-up-btn {
+            font-size: 2.2rem;
+        }
+    }
+
+    .close-mobile-menu-btn {
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: .5rem;
+        fill: white;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    #landing-nav {
+        padding: 2.5rem 0rem;
+
+        .big-btns {
+            display: block;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+}

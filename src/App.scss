@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import './scss/variables';
+
+:root {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    background: none;
+    height: 100%;
+    font-family: Montserrat;
+    font-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: .3rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ee64d1, #eacc56);
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+button {
+    font-family: Montserrat;
+    font-size: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.route-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
