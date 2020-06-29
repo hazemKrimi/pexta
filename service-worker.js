@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pexta/precache-manifest.ec16d46e45ab4547f3d6de67c9167181.js"
+  "/pexta/precache-manifest.438fc20559a898c90e3e06b28d452332.js"
 );
 
 self.addEventListener('message', (event) => {

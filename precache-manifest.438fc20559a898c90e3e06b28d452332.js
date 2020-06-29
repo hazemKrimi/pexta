@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "585e46f8f18271b62b8d4c04a7ff9b3c",
+    "revision": "cb8c3f09eb2ee63527acea08ca5418ed",
     "url": "/pexta/index.html"
   },
   {
-    "revision": "4d1aba9f7ee3afcf0d03",
+    "revision": "82ffe0c3c6c256ab7900",
     "url": "/pexta/static/css/main.46d00040.chunk.css"
   },
   {
-    "revision": "6a5360c031a3c0e2623c",
-    "url": "/pexta/static/js/2.7e2131bb.chunk.js"
+    "revision": "51dda4c6df7ffeb5a124",
+    "url": "/pexta/static/js/2.0f37c227.chunk.js"
   },
   {
-    "revision": "4d1aba9f7ee3afcf0d03",
-    "url": "/pexta/static/js/main.ea36e504.chunk.js"
+    "revision": "82ffe0c3c6c256ab7900",
+    "url": "/pexta/static/js/main.cd1c66fb.chunk.js"
   },
   {
     "revision": "e3a4d301ab76b912fed2",
