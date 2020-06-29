@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1163.5 87">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-94.64" y1="812.53" x2="1573.28" y2="676.04" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eacc56"/>
+      <stop offset="1" stop-color="#ee64d1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-87.93" y1="894.49" x2="1579.98" y2="757.99" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>page  wave</title>
+  <g>
+    <path class="cls-1" d="M90.34,783.36C74.5,741.5,14.51,765.47,0,747.5v87H337C264.06,783.85,120.67,863.49,90.34,783.36Z" transform="translate(0 -747.5)"/>
+    <path class="cls-2" d="M951.5,767c-71.82,6.2-172.37,17.17-249.83,67.5H1163.5V786C1029.5,785.5,1034.5,762,951.5,767Z" transform="translate(0 -747.5)"/>
+  </g>
+</svg>
